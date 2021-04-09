@@ -1,3 +1,72 @@
-﻿<div class="text-center">
-    <h1 class="display-4">Welcome To Video Calling</h1>
-</div>
+﻿@*<div class="text-center">
+        <h1 class="display-4">Welcome To Video Calling</h1>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <div>
+        <button id="startCamera">Start Camera</button>
+        <button id="stopCamera">Stop Camera</button>
+        <button id="startConnection">Start Connection</button>
+    </div>
+    <div>
+        <textarea name="message" id="message"></textarea>
+        <input type="button" id="sendButton" value="Send Message" />
+        <div id="messages"></div>
+    </div>
+
+    <div class="videoArea">
+        <video id="localVideo" autoplay playsinline></video>
+    </div>*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/lib/js/demo.js"></script>
+    <script src="~/lib/js/video-stream-merger.js"></script>
+
+
+    <script>
+        $(function () {
+
+            Demo.init();
+        });
+    </script>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome To Video Calling</h1>
+    </div>
+
+    <div>
+        <button id="startConnection">Start Connection</button>
+        <button id="btnMuteUnmute">UnMute</button>
+        <button id="btnStartStopCam">Start Camera</button>
+        <button id="btnStartStopScreenshare">Screen Share</button>
+        <button id="btnStartReco">Start Recording</button>
+        <button id="btnPauseReco" style="display:none">Pause</button>
+        <button id="btnResumeReco" style="display:none">Resume</button>
+        <button id="btnStopReco" style="display:none">Stop</button>
+
+        <a href="" id="downloadRecording" style="display:none">Download</a>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+
+        <video autoplay muted controls id="videoCtr" width="480" height="100"></video>
+        <video autoplay muted controls id="remoteVideoCtr" width="480" height="100"></video>
+        <video autoplay muted controls id="videoCtrRec" width="100" height="100" style="display:none"></video>
+    </div>
+
+
+</body>
+</html>
