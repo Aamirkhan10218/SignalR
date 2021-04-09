@@ -26,7 +26,7 @@ namespace SignalR_ChatApp
         {
             services.AddControllersWithViews();
             services.AddSignalR();
-            services.AddMvc();
+         //   services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +58,6 @@ namespace SignalR_ChatApp
                 endpoints.MapHub<ChatHub>("/chatHub");
 
             });
-            app.UseMvc();
         }
     }
 }

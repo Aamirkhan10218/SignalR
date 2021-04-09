@@ -18,8 +18,16 @@ namespace SignalR_ChatApp.Controllers
             return View();
         }
 
-      
+        public IActionResult Whiteboard()
+        {
+            return View();
+        }
+        public IActionResult VideoCalling()
+        {
+            return View();
+        }
 
-      
+
+
     }
 }
